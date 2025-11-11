@@ -55,8 +55,8 @@ A comprehensive Python-based quality control system for clinical laboratory test
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/QC_sigma_abnormality_detection.git
-cd QC_sigma_abnormality_detection
+git clone https://github.com/linhduongtuan/labqcpro.git
+cd labqcpro
 ```
 
 2. **Create virtual environment**
@@ -128,7 +128,7 @@ python advanced_fault_detection.py
 ## 📁 Project Structure
 
 ```
-QC_sigma_abnormality_detection/
+labqcpro/
 ├── lab_qc_analysis.py           # Core QC analysis engine
 ├── lab_qc_demo.py                # Interactive demonstration
 ├── realtime_qc_monitor.py        # Web-based real-time dashboard
@@ -179,17 +179,17 @@ Formula: `Sigma = (TEa - |Bias|) / CV`
 The system generates multiple output files:
 
 ### Charts (PNG)
-- `levey_jennings_*.png` - Control charts with Westgard rules
-- `sigma_chart_*.png` - Sigma quality assessment
-- `bland_altman_*.png` - Method comparison plots
-- `correlation_*.png` - Correlation analysis
-- `anova_*.png` - Multi-group comparison
+- `results/levey_jennings_*.png` - Control charts with Westgard rules
+- `results/sigma_chart_*.png` - Sigma quality assessment
+- `results/bland_altman_*.png` - Method comparison plots
+- `results/correlation_*.png` - Correlation analysis
+- `results/anova_*.png` - Multi-group comparison
 
 ### Data Files (CSV)
-- `qc_summary_report.csv` - Summary statistics
-- `westgard_violations_*.csv` - Detected rule violations
-- `cusum_analysis.csv` - CUSUM results
-- `ewma_analysis.csv` - EWMA results
+- `results/qc_summary_report.csv` - Summary statistics
+- `results/westgard_violations_*.csv` - Detected rule violations
+- `results/cusum_analysis.csv` - CUSUM results
+- `results/ewma_analysis.csv` - EWMA results
 
 ## 🛠️ Technical Requirements
 
