@@ -62,12 +62,12 @@ coverage.xml
 docs/_build/
 site/
 
-# Results and outputs (optional - comment out if you want to commit results)
-results/*.png
-results/*.csv
+# Results and outputs - these are generated, not committed
+results/
 *.png
 *.csv
 !data/*.csv
+!docs/*.png
 
 # Logs
 *.log
