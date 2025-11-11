@@ -13,6 +13,7 @@ This module implements enhanced detection methods including:
 
 import numpy as np
 import pandas as pd
+import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
@@ -375,7 +376,7 @@ class AdvancedFaultDetector:
         
         return pd.DataFrame(violations)
     
-    def comprehensive_analysis(self, values):
+    def comprehensive_analysis(self, values, save_dir=None):
         """
         Run all detection methods and combine results
         """
@@ -421,7 +422,53 @@ class AdvancedFaultDetector:
         # Sort by index (chronological order)
         if len(all_violations) > 0:
             all_violations = all_violations.sort_values('index').reset_index(drop=True)
-        
+        # Optionally save CUSUM/EWMA analyses to CSV
+        if save_dir:
+            try:
+                os.makedirs(save_dir, exist_ok=True)
+            except Exception:
+                pass
+
+            # CUSUM summary (pos/neg series)
+            cusum = cusum_result
+            n = len(values)
+            try:
+                cusum_df = pd.DataFrame({
+                    'run': np.arange(n) + 1,
+                    'cusum_pos': cusum['cusum_pos'],
+                    'cusum_neg': cusum['cusum_neg']
+                })
+                cusum_df.to_csv(os.path.join(save_dir, 'cusum_analysis.csv'), index=False)
+            except Exception:
+                # Don't fail the analysis if saving fails
+                pass
+
+            # EWMA series with control limits
+            ewma = ewma_result
+            try:
+                ewma_df = pd.DataFrame({
+                    'run': np.arange(n) + 1,
+                    'ewma': ewma['ewma']
+                })
+                ewma_df['ucl'] = ewma.get('ucl', np.nan)
+                ewma_df['lcl'] = ewma.get('lcl', np.nan)
+                ewma_df.to_csv(os.path.join(save_dir, 'ewma_analysis.csv'), index=False)
+            except Exception:
+                pass
+
+            # Also save any CUSUM/EWMA violations if present
+            try:
+                if isinstance(cusum.get('violations'), pd.DataFrame) and len(cusum['violations']) > 0:
+                    cusum['violations'].to_csv(os.path.join(save_dir, 'cusum_violations.csv'), index=False)
+            except Exception:
+                pass
+
+            try:
+                if isinstance(ewma.get('violations'), pd.DataFrame) and len(ewma['violations']) > 0:
+                    ewma['violations'].to_csv(os.path.join(save_dir, 'ewma_violations.csv'), index=False)
+            except Exception:
+                pass
+
         return {
             'all_violations': all_violations,
             'westgard': westgard,
@@ -587,8 +634,8 @@ def demo_advanced_detection():
     # Initialize detector
     detector = AdvancedFaultDetector(mean, std, sensitivity='medium')
     
-    # Run comprehensive analysis
-    results = detector.comprehensive_analysis(values)
+    # Run comprehensive analysis (save CUSUM/EWMA outputs to results/)
+    results = detector.comprehensive_analysis(values, save_dir='results')
     
     # Display summary
     print("\n" + "="*80)

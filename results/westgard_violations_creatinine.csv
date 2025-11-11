@@ -1,0 +1,3 @@
+run,rule,description,action
+42,1-3s,One control exceeds ±3 SD,REJECT - Random error
+75,R-4s,Range exceeds 4 SD,REJECT - Random error

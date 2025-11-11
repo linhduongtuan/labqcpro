@@ -1,0 +1,18 @@
+index,type,severity,description,value,action
+31,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0631 > 1.0450),1.063122100739372,WARNING - Upward trend detected
+32,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0664 > 1.0450),1.0663627083441183,WARNING - Upward trend detected
+33,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0635 > 1.0450),1.0635130573857356,WARNING - Upward trend detected
+34,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0800 > 1.0450),1.0800358950296205,WARNING - Upward trend detected
+35,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0728 > 1.0450),1.0728202795239863,WARNING - Upward trend detected
+36,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0813 > 1.0450),1.0813448595692368,WARNING - Upward trend detected
+37,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0665 > 1.0450),1.0664791864165917,WARNING - Upward trend detected
+38,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0609 > 1.0450),1.0609014886442891,WARNING - Upward trend detected
+39,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0717 > 1.0450),1.0716898032741224,WARNING - Upward trend detected
+40,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0697 > 1.0450),1.069736508419252,WARNING - Upward trend detected
+41,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0625 > 1.0450),1.0625028895473014,WARNING - Upward trend detected
+42,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0538 > 1.0450),1.0538458288139587,WARNING - Upward trend detected
+43,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0451 > 1.0450),1.0450656260952742,WARNING - Upward trend detected
+56,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0579 > 1.0450),1.0578754181919519,WARNING - Upward trend detected
+57,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0482 > 1.0450),1.0482082107950494,WARNING - Upward trend detected
+58,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0469 > 1.0450),1.0468792029500753,WARNING - Upward trend detected
+59,EWMA_HIGH,WARNING,EWMA exceeds upper limit (1.0523 > 1.0450),1.0522588136312838,WARNING - Upward trend detected

@@ -1,0 +1,9 @@
+run,rule,description,action
+6,1-3s,One control exceeds ±3 SD,REJECT - Random error
+6,R-4s,Range exceeds 4 SD,REJECT - Random error
+7,1-3s,One control exceeds ±3 SD,REJECT - Random error
+7,2-2s,Two consecutive controls exceed ±2 SD (same side),REJECT - Systematic error
+8,R-4s,Range exceeds 4 SD,REJECT - Random error
+33,1-3s,One control exceeds ±3 SD,REJECT - Random error
+33,R-4s,Range exceeds 4 SD,REJECT - Random error
+72,10-x,10 consecutive controls on same side of mean,REJECT - Systematic error

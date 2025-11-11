@@ -216,8 +216,8 @@ def demo_advanced_fault_detection():
         sensitivity='medium'
     )
     
-    # Run comprehensive analysis
-    results = detector.comprehensive_analysis(values)
+    # Run comprehensive analysis (save CUSUM/EWMA outputs to results/)
+    results = detector.comprehensive_analysis(values, save_dir='results')
     
     # Display summary
     print("\n" + "="*80)
