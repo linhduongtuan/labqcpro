@@ -517,7 +517,7 @@ def main():
         if len(violations) > 0:
             print(f"\n⚠ Westgard Rule Violations ({len(violations)} found):")
             print(violations.to_string(index=False))
-            violations.to_csv(f'westgard_violations_{analyte}.csv', index=False)
+            violations.to_csv(f'results/westgard_violations_{analyte}.csv', index=False)
         else:
             print("✓ No Westgard rule violations detected - QC is in control")
         
@@ -709,9 +709,9 @@ def main():
     
     summary_df = pd.DataFrame(summary_data)
     print("\n" + summary_df.to_string(index=False))
-    summary_df.to_csv('qc_summary_report.csv', index=False)
-    print(f"\n✓ Summary report saved: qc_summary_report.csv")
-    
+    summary_df.to_csv('results/qc_summary_report.csv', index=False)
+    print(f"\n✓ Summary report saved: results/qc_summary_report.csv")
+
     print("\n" + "="*80)
     print("ANALYSIS COMPLETE!")
     print("="*80)
