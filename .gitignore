@@ -63,11 +63,13 @@ docs/_build/
 site/
 
 # Results and outputs - these are generated, not committed
-results/
+# We allow explicitly pushing the entire `results/` directory when needed.
+# Keep global ignores for image/csv files but unignore anything under results/.
 *.png
 *.csv
 !data/*.csv
 !docs/*.png
+!results/**
 
 # Logs
 *.log
