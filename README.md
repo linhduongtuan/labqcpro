@@ -41,13 +41,13 @@ A comprehensive Python-based quality control system for clinical laboratory test
 ## 📊 Screenshots
 
 ### Levey-Jennings Chart with Westgard Rules
-![Levey-Jennings Chart](results/levey_jennings_example.png)
+![Levey-Jennings Chart (Creatinine)](results/levey_jennings_creatinine.png)
 
-### Real-Time Monitoring Dashboard
-![Real-Time Monitor](results/realtime_monitor.png)
+### Real-Time Monitoring Dashboard (screenshot)
+![Real-Time Monitor (demo)](results/demo_advanced_fault_detection.png)
 
 ### Six Sigma Quality Assessment
-![Sigma Metrics](results/sigma_chart.png)
+![Sigma Metrics (Creatinine)](results/demo_sigma_chart.png)
 
 ## 🚀 Quick Start
 
